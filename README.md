@@ -1,0 +1,39 @@
+Create a Python program that acts as a basic calculator. It should prompt the user to
+enter two numbers and choose an operation (addition, subtraction, multiplication,
+division). Then, it should perform the selected operation and display the result to the
+user. With explanation
+
+Copy
+# Import the necessary module
+import operator
+
+# Prompt the user to enter the first number
+num1 = float(input("Enter the first number: "))
+
+# Prompt the user to enter the second number
+num2 = float(input("Enter the second number: "))
+
+# Prompt the user to choose an operation
+operation = input("Choose an operation (+, -, *, /): ")
+
+# Perform the selected operation
+result = 0
+if operation == "+":
+    result = operator.add(num1, num2)
+elif operation == "-":
+    result = operator.sub(num1, num2)
+elif operation == "*":
+    result = operator.mul(num1, num2)
+elif operation == "/":
+    result = operator.truediv(num1, num2)
+else:
+    print("Invalid operation")
+
+# Display the result to the user
+print("The result is:", result)
+
+
+Enter the first number: 10
+Enter the second number: 5
+Choose an operation (+, -, *, /): +
+The result is: 15.0
